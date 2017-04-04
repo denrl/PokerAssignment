@@ -1,7 +1,7 @@
 ﻿namespace PokerAssignment.Data
 {
     // Card type weight
-    public enum Weight : byte
+    public enum Weight : int
     {
         Ace = 128,
         King = 64,

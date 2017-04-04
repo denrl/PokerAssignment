@@ -12,9 +12,9 @@ namespace PokerAssignment.Resolver
         }
 
 
-        public override Hand Data
+        public override long Data
         {
-            get { return Resolved ? Hand.TwoOfAKind : Hand.NotResolved; }
+            get { return Resolved ? (long)Hand.TwoOfAKind : (long)Hand.NotResolved; }
         }
     }
 }

@@ -17,11 +17,11 @@ namespace PokerAssignment.Resolver
                     .Any(group => group.Count() == 5);
             if (Resolved)
             {
-                Data = Hand.Flush;
+                Data = (long)Hand.Flush;
             }
             else
             {
-                Data = Hand.NotResolved;
+                Data = (long)Hand.NotResolved;
             }
         }
         

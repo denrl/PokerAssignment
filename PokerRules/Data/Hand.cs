@@ -3,12 +3,11 @@
     /// <summary>
     /// Enum that contains points different cases
     /// </summary>
-    public enum Hand : byte
+    public enum Hand : int
     {
-        Flush = 128,
-        ThreeOfAKind = 64,
-        TwoOfAKind = 32,
-        HighCard = 16,
+        Flush = 1280,
+        ThreeOfAKind = 640,
+        TwoOfAKind = 320,
         NotResolved = 0
     }
 }

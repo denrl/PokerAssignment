@@ -12,15 +12,15 @@ namespace PokerAssignment.Resolver
 
         public override void resolve(IList<Card> cards)
         {
-            Resolved = cards != null && cards.Any(card=>card.Value == Weight.Ace);
+            Resolved = cards != null && cards.Any();
             //
             if (Resolved)
             {
-                Data = Hand.HighCard;
+                Data = cards.Sum(x=>(long)x.Value);
             }
             else
             {
-                Data = Hand.NotResolved;
+                Data = (long)Hand.NotResolved;
             }
         }
         

@@ -13,7 +13,7 @@ namespace PokerAssignment.Resolver
 
         public virtual bool Resolved { get; protected set; }
 
-        public virtual Hand Data { get; protected set; }
+        public virtual long Data { get; protected set; }
 
     }
 }

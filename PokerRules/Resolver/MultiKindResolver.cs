@@ -9,11 +9,11 @@ namespace PokerAssignment.Resolver
     /// </summary>
     public abstract class MultiKindResolver : PokerResolver
     {
-        private byte totalSameCardKind { get; set; }
+        private byte TotalSameCardKind { get; set; }
 
         protected MultiKindResolver(byte totalSameCardKind)
         {
-            this.totalSameCardKind = totalSameCardKind;
+            this.TotalSameCardKind = totalSameCardKind;
         }
 
         public override void resolve(IList<Card> cards)
@@ -21,7 +21,7 @@ namespace PokerAssignment.Resolver
             Resolved =
                 cards
                     .GroupBy(card => card.Value)
-                    .Any(group => group.Count() >= totalSameCardKind);
+                    .Any(group => group.Count() >= TotalSameCardKind);
         }
         
     }
